@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenShift Documentation</title>
+    <!-- Link to the desired Docsify theme CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <!-- Custom styles -->
+    <style>
+        body {
+            font-family: "IBM Plex Sans", Arial, sans-serif;
+            line-height: 1.6;
+            color: #262626;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #2a3a49; /* Dark blue color */
+            text-decoration: none;
+        }
+        a:hover {
+            color: #0046be; /* Blue color on hover */
+            text-decoration: underline;
+        }
+        /* Adjust other styles as needed */
+    </style>
+    <!-- Link to IBM Plex Sans font -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            name: 'OpenShift Documentation',
+            repo: '',
+            loadSidebar: true,
+            search: 'auto',
+            basePath: './docs/'
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+</body>
+</html>
