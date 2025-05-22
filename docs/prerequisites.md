@@ -32,7 +32,7 @@ Minimum hardware requirements:
 
 ![Environment](images/environment.png)
 
-Each KVM guest accesses a KVM network bridge set up as macvtap that enables all nodes of this Red Hat OpenShift cluster to be on the same network range as the KVM host svlxioc1 server
+Each KVM guest accesses a KVM network bridge set up as macvtap that enables all nodes of this Red Hat OpenShift cluster to be on the same network range as the KVM host
 
-**Note: In this network configuration, the KVM host (svlxioc1) does not have network access to any of the KVM guests (master/worker/infrastructure vms). This is why it is important to access your KVM guests from  workstation, not the KVM host(svlxioc1)**
+**Note: In this network configuration, the KVM host (IBMZ server) does not have network access to any of the KVM guests (master/worker/infrastructure vms). This is why it is important to access your KVM guests from  workstation, not the KVM host(IBMZ server)**
 

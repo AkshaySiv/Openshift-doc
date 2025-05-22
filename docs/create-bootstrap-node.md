@@ -1,6 +1,6 @@
 # Create the bootstrap node
 
-### step 1 . Log on to the svlxioc1 host 
+### step 1 . Log on to the  host 
 
 
 ### Step 2 . Create disk image
@@ -26,7 +26,7 @@ virt-install \
     coreos.inst=yes \
     coreos.inst.install_dev=vda \
     coreos.live.rootfs_url=http://9.30.200.145:8080/ocp/rhcos-4.15.0-s390x-live-rootfs.s390x.img \
-    ip=9.30.200.146::9.30.200.1:255.255.252.0:bootstrap.idz-ocp-z-1.svl.ibm.com:enc1:none:none \
+    ip=9.30.200.146::9.30.200.1:255.255.252.0:bootstrap.idz-ocp-z-1.example.com:enc1:none:none \
     nameserver=9.30.31.32 \
     coreos.inst.ignition_url=http://9.30.200.145:8080/ignitions/bootstrap.ign" \
   --noautoconsole \
@@ -56,4 +56,4 @@ The bootstrap program should be ready for the next stage of the installation pro
 
 ***Created "99_openshift-cluster-api_master-user-data-secret.yaml" secrets.v1./master-user-data -n openshift-machine-api***
 
-When you see this message, go back to svlxioc1 host and run the next script to install the control nodes (master nodes)
+When you see this message, go back to host and run the next script to install the control nodes (master nodes)

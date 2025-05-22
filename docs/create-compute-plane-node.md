@@ -2,8 +2,8 @@
 
 **DNS details**
 ```bash
-worker0.idz-ocp-z-1.svl.ibm.com		9.30.200.150 
-worker1.idz-ocp-z-1.svl.ibm.com		9.30.200.151
+worker0.idz-ocp-z-1.example.com		9.30.200.150 
+worker1.idz-ocp-z-1.example.com		9.30.200.151
 ```
 
 ## Create disk image
@@ -34,7 +34,7 @@ virt-install \
     coreos.inst=yes \
     coreos.inst.install_dev=vda \
     coreos.live.rootfs_url=http://9.30.200.145:8080/ocp/rhcos-4.15.0-s390x-live-rootfs.s390x.img \
-    ip=9.30.200.150::9.30.200.1:255.255.252.0:worker0.idz-ocp-z-1.svl.ibm.com:enc1:none:none \
+    ip=9.30.200.150::9.30.200.1:255.255.252.0:worker0.idz-ocp-z-1.example.com:enc1:none:none \
     nameserver=9.30.31.32 \
     coreos.inst.ignition_url=http://9.30.200.145:8080/ignitions/worker.ign" \
   --noautoconsole \
@@ -58,7 +58,7 @@ virt-install \
     coreos.inst=yes \
     coreos.inst.install_dev=vda \
     coreos.live.rootfs_url=http://9.30.200.145:8080/ocp/rhcos-4.15.0-s390x-live-rootfs.s390x.img \
-    ip=9.30.200.151::9.30.200.1:255.255.252.0:worker1.idz-ocp-z-1.svl.ibm.com:enc1:none:none \
+    ip=9.30.200.151::9.30.200.1:255.255.252.0:worker1.idz-ocp-z-1.example.com:enc1:none:none \
     nameserver=9.30.31.32 \
     coreos.inst.ignition_url=http://9.30.200.145:8080/ignitions/worker.ign" \
   --noautoconsole \

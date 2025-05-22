@@ -1,7 +1,7 @@
 
 #  Installation
 
-This guide walks you through the installation process of setting up a Red Hat OpenShift cluster in IBM Z. Each step is crucial to ensure a smooth and successful deployment
+This guide walks you through the installation process of setting up a Red Hat OpenShift cluster in  Z. Each step is crucial to ensure a smooth and successful deployment
 
 ## Steps to Install OpenShift
 

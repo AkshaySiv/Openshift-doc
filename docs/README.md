@@ -1,6 +1,6 @@
 # OpenShift Documentation
 
-Welcome to the OpenShift documentation. This guide provides detailed instructions for deploying Red Hat OpenShift on IBM Z using the KVM Hypervisor.
+Welcome to the OpenShift documentation. This guide provides detailed instructions for deploying Red Hat OpenShift on  Z using the KVM Hypervisor.
 
 ## Table of Contents
 

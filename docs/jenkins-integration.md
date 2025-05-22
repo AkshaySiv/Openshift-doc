@@ -18,7 +18,7 @@ Please find the step-by-step guide on how to integrate a Jenkins Master with an 
 ### 1. Create a namespace in openshift cluster
 
 ```bash
-oc create namespace idaa-ns
+oc create namespace ocp-namespace
 ```
 ### 2. Create Service account in OpenShift cluster
 
@@ -26,13 +26,13 @@ oc create namespace idaa-ns
 - Create a service account with the necessary permissions in the namsepsace
 
 ``` bash
-oc create serviceaccount dwabuild -n idaa-ns
+oc create serviceaccount dwabuild -n ocp-namespace
 ```
 
 - Retrieve the service account token:
 
 ```bash
-oc create token dwabuild --duration=$((90*24))h -n idaa-ns
+oc create token dwabuild --duration=$((90*24))h -n ocp-namespace
 ```
 
 ### 3. Configure OpenShift Credentials in Jenkins
@@ -49,35 +49,23 @@ oc create token dwabuild --duration=$((90*24))h -n idaa-ns
 
 - Navigate to `Manage Jenkins` > `Cloud`.
 - Add a new Cloud Configuration > `x86-OpenShift-Cluste`.
-  - Enter the OpenShift API URL  : `https://api.apps.idz-ocp-x-1.svl.ibm.com:6443`
+  - Enter the OpenShift API URL  : `https://api.apps.idz-ocp-x-1.example.com:6443`
   - Select the credentials added in the previous step.
   - Test the connection to ensure it is working.
 
 ### 5 . Create RoleBinding
 
-To create pods we need to create a new RoleBinding for our user that we called idaa-ns-admin that references the Role cluster-admin 
+To create pods we need to create a new RoleBinding for our user that we called ocp-namespace-admin that references the Role cluster-admin 
 
 ```bash
-oc create rolebinding idaa-ns-admin --clusterrole=cluster-admin --serviceaccount=idaa-ns:dwabuild -n idaa-ns
+oc create rolebinding ocp-namespace-admin --clusterrole=cluster-admin --serviceaccount=ocp-namespace:dwabuild -n ocp-namespace
 ```
 
 - Explanation:
-     - `idaa-ns-admin` is the name of the `RoleBinding`.
+     - `ocp-namespace-admin` is the name of the `RoleBinding`.
      - `--clusterrole=cluster-admin` specifies that the `RoleBinding` references the `cluster-admin` cluster role.
-     - `--serviceaccount=idaa-ns:dwabuild` specifies the service account `dwabuild` in the `idaa-ns` namespace.
-     - `-n idaa-ns` sets the namespace for the `RoleBinding`.
-
-### 6 . Create Secrets for Artifactorty image pull in OpenShift
-
-```bash
-
-oc create secret docker-registry artifactory-proxy-svl-access-token --docker-server="https://na-proxy-svl.artifactory.swg-devops.com" --docker-username="idaa.fyreicp@de.ibm.com" --docker-password="**********qUVJDUGV5OEJOdExU" --docker-email="idaa.fyreicp@de.ibm.com" -n idaa-ns
-```
-```bash
-oc create secret docker-registry artifactory-acces-token --docker-server="https://na-public.artifactory.swg-devops.com" --docker-username="idaa.fyreicp@de.ibm.com" --docker-password="**********qUjhqUVJDUGV5OEJOdExU" --docker-email="idaa.fyreicp@de.ibm.com" -n idaa-ns
-```
-
-### 7 . Prepare pod spec
+     - `--serviceaccount=ocp-namespace:dwabuild` specifies the service account `dwabuild` in the `ocp-namespace` namespace.
+     - `-n ocp-namespace` sets the namespace for the `RoleBinding`.
 
 
-[https://github.ibm.com/Everest/jenkins-shared-library/blob/Openshift_z_Cluster_test/resources/podspecs/centoscppbuild-test-small-x86.yml](https://github.ibm.com/Everest/jenkins-shared-library/blob/Openshift_z_Cluster_test/resources/podspecs/centoscppbuild-test-small-x86.yml)
+

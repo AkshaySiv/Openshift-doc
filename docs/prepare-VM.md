@@ -1,9 +1,9 @@
 
 # Prepare load balacer VM 
 
-### Step 1 : Log on to svlxioc1 host 
+### Step 1 : Log on to IBMZ server host 
 
-### Step 2 : Mount rhel 9 iso image to svlxioc1. please follow  the steps from [https://ftp3.linux.ibm.com/](https://ftp3.linux.ibm.com/)
+### Step 2 : Mount rhel 9 iso image to IBMZ server. please follow  the steps from [https://ftp3.linux.ibm.com/](https://ftp3.linux.ibm.com/)
 
 
 ### Step 3 : Create disk image
@@ -72,7 +72,7 @@ Configure Static IP Address:
 
 Set the static IP address, subnet mask, gateway, and DNS servers for the connection profile. 
 
-Here we need to assign api ip as the loadbalancer ip , which is  9.30.200.145 (api.idz-ocp-z-1.svl.ibm.com)
+Here we need to assign api ip as the loadbalancer ip , which is  9.30.200.145 (api.idz-ocp-z-1.example.com)
 [Refer DNS entries ](config/dns-entries.txt)
 
 Run the following commands
@@ -82,7 +82,7 @@ nmcli connection add type ethernet ifname enc1 con-name enc1 \
 ipv4.addresses "9.30.200.145/32" \
 ipv4.gateway "9.30.200.1" \
 ipv4.dns "9.30.31.32" \
-ipv4.dns-search "svl.ibm.com" \
+ipv4.dns-search "example.com" \
 ipv4.method manual \
 ipv6.method ignore 
 ```
@@ -90,7 +90,7 @@ After running this command, you may need to activate the connection using:
 ```bash
 nmcli connection up enc1
 ```
-Once you've completed these steps, your load balancer VM should be configured with a static IP address(9.30.200.145) and should be accessible from outside the svlxioc1 host.
+Once you've completed these steps, your load balancer VM should be configured with a static IP address(9.30.200.145) and should be accessible from outside the IBMZ server host.
 Ensure your are able to connect to your new load balancer VM from your local machine (that is, your laptop or workstation)
 
 ### Step 6 : Install and configure HA proxy

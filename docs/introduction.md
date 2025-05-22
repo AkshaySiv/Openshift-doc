@@ -1,17 +1,17 @@
 
-This guide will introduce how to use an OpenShift cluster installed on IBM Z as a Jenkins agent (slave) to manage build workloads.
+This guide will introduce how to use an OpenShift cluster installed on  Z as a Jenkins agent (slave) to manage build workloads.
 
 # What is OpenShift?
 
 OpenShift is an enterprise Kubernetes container orchestration platform by Red Hat, providing developers with the tools to deploy and manage containerized applications at scale. It extends Kubernetes with developer and operational tools that are integrated into a single platform, making it ideal for managing complex applications.
 
-# Benefits of Using OpenShift on IBM Z as Jenkins Agents
+# Benefits of Using OpenShift on  Z as Jenkins Agents
 
-As support for the current IBM Cloud Private (ICP) environment is ending, we must migrate our pipeline to OpenShift to leverage the following advantages:
+As support for the current  Cloud Private (ICP) environment is ending, we must migrate our pipeline to OpenShift to leverage the following advantages:
 
-- **Scalability**: OpenShift on IBM Z allows for scaling Jenkins agents dynamically based on workload demands.
+- **Scalability**: OpenShift on  Z allows for scaling Jenkins agents dynamically based on workload demands.
 - **Isolation**: Containers provide isolated environments for builds, ensuring consistency and reducing conflicts.
-- **Resource Efficiency**: IBM Z's high performance and reliability combined with OpenShift's orchestration capabilities ensure efficient use of resources.
+- **Resource Efficiency**:  Z's high performance and reliability combined with OpenShift's orchestration capabilities ensure efficient use of resources.
 - **Flexibility**: The ability to run diverse workloads in a managed, consistent environment.
 
 # OpenShift Container Platform 4
@@ -25,7 +25,7 @@ OpenShift Container Platform is a platform for developing and running containeri
 
 # OpenShift Container Platform Installation on S390X
 
-Installing OpenShift Container Platform on IBM Z with PR/SM (Processor Resource/Systems Manager), LPAR (Logical Partitioning), RHEL (Red Hat Enterprise Linux), and KVM (Kernel-based Virtual Machine) virtualization is a complex but powerful setup that allows you to run containerized applications on IBM's mainframe platform. 
+Installing OpenShift Container Platform on  Z with PR/SM (Processor Resource/Systems Manager), LPAR (Logical Partitioning), RHEL (Red Hat Enterprise Linux), and KVM (Kernel-based Virtual Machine) virtualization is a complex but powerful setup that allows you to run containerized applications on 's mainframe platform. 
 
 Below is the architecture diagram illustrating the integration between Jenkins and OpenShift cluster
 

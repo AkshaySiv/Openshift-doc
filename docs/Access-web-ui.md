@@ -9,7 +9,7 @@ cat /root/ocp-install/ocp-deploy/auth/kubeadmin-password
 ```
 
 ### Step 3 : Access Openshfit Console
-In your browser, go to: [https://console-openshift-console.apps.idz-ocp-z-1.svl.ibm.com/](https://console-openshift-console.apps.idz-ocp-z-1.svl.ibm.com/)
+In your browser, go to: [https://console-openshift-console.apps.idz-ocp-z-1.example.com/](https://console-openshift-console.apps.idz-ocp-z-1.example.com/)
 
 Note:  Username: kubeadmin and use password from step 2
 
