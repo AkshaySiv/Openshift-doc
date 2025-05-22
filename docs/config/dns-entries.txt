@@ -1,0 +1,58 @@
+Power cluster 1:
+Wildcard: 
+*.apps.idz-ocp-p-1.svl.ibm.com		9.30.200.104 
+Normal DNS request:
+helper.idz-ocp-p-1.svl.ibm.com			9.30.200.104 
+api.idz-ocp-p-1.svl.ibm.com			9.30.200.104
+api-int.idz-ocp-p-1.svl.ibm.com			9.30.200.104 
+bootstrap.idz-ocp-p-1.svl.ibm.com		9.30.200.105 
+master0.idz-ocp-p-1.svl.ibm.com		9.30.200.106 
+master1.idz-ocp-p-1.svl.ibm.com		9.30.200.107 
+master2.idz-ocp-p-1.svl.ibm.com		9.30.200.108 
+worker0.idz-ocp-p-1.svl.ibm.com		9.30.200.109
+worker1.idz-ocp-p-1.svl.ibm.com		9.30.200.110
+worker2.idz-ocp-p-1.svl.ibm.com		9.30.200.111  
+
+Power cluster 2:
+Wildcard:
+*.apps.idz-ocp-p-2.svl.ibm.com		9.30.200.115 
+Normal DNS request:
+helper.idz-ocp-p-2.svl.ibm.com			9.30.200.115
+api.idz-ocp-p-2.svl.ibm.com			9.30.200.115 
+api-int.idz-ocp-p-2.svl.ibm.com			9.30.200.115 
+bootstrap.idz-ocp-p-2.svl.ibm.com		9.30.200.116
+master0.idz-ocp-p-2.svl.ibm.com		9.30.200.117 
+master1.idz-ocp-p-2.svl.ibm.com		9.30.200.118 
+master2.idz-ocp-p-2.svl.ibm.com		9.30.200.119 
+worker0.idz-ocp-p-2.svl.ibm.com		9.30.200.120 
+worker1.idz-ocp-p-2.svl.ibm.com		9.30.200.121
+worker2.idz-ocp-p-2.svl.ibm.com		9.30.200.122
+worker3.idz-ocp-p-2.svl.ibm.com		9.30.200.123
+worker4.idz-ocp-p-2.svl.ibm.com		9.30.200.124
+
+x86 cluster 1:
+Wildcard:
+*.apps.idz-ocp-x-1.svl.ibm.com		9.30.200.130 
+Normal DNS request:
+helper.idz-ocp-x-1.svl.ibm.com			9.30.200.130
+api.idz-ocp-x-1.svl.ibm.com			9.30.200.130 
+api-int.idz-ocp-x-1.svl.ibm.com			9.30.200.130 
+bootstrap.idz-ocp-x-1.svl.ibm.com		9.30.200.131 
+master0.idz-ocp-x-1.svl.ibm.com		9.30.200.132 
+master1.idz-ocp-x-1.svl.ibm.com		9.30.200.133 
+master2.idz-ocp-x-1.svl.ibm.com		9.30.200.134 
+
+
+System z cluster 2:
+Wildcard:
+*.apps.idz-ocp-z-1.svl.ibm.com		9.30.200.145 
+Normal DNS request:
+helper.idz-ocp-z-1.svl.ibm.com			9.30.200.145
+api.idz-ocp-z-1.svl.ibm.com			9.30.200.145 
+api-int.idz-ocp-z-1.svl.ibm.com			9.30.200.145 
+bootstrap.idz-ocp-z-1.svl.ibm.com		9.30.200.146 
+master0.idz-ocp-z-1.svl.ibm.com		9.30.200.147 
+master1.idz-ocp-z-1.svl.ibm.com		9.30.200.148 
+master2.idz-ocp-z-1.svl.ibm.com		9.30.200.149 
+worker0.idz-ocp-z-1.svl.ibm.com		9.30.200.150 
+worker1.idz-ocp-z-1.svl.ibm.com		9.30.200.151
